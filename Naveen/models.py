@@ -11,9 +11,5 @@ class Student(models.Model):
     total_avg=models.FloatField()
     Grade=models.CharField(max_length=100)
 
-# def __str__(self):
-
-#     return f"{self.Name} {self.marks1} {self.marks2} {self.marks3} {self.marks4} {self.total} {self.total_avg} {self.Grade}"
     def __str__(self):
-
         return f"Name:{self.Name} Total:{self.total} Grade:{self.Grade}"
