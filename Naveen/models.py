@@ -13,3 +13,4 @@ class Student(models.Model):
 
     def __str__(self):
         return f"Name:{self.Name} Total:{self.total} Grade:{self.Grade}"
+    

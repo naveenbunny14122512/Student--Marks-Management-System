@@ -1,14 +1,12 @@
-from django.shortcuts import render
 from .models import Student
-
-
-from django.shortcuts import render
+from .utils import recalculate
+from django.shortcuts import render, redirect
 
 def SRS(request):
-
+    
     if request.method == 'POST':
 
-        name = request.POST.get('Name')
+        name = request.POST.get('Name') 
         m1 = request.POST.get('marks1')
         m2 = request.POST.get('marks2')
         m3 = request.POST.get('marks3')
@@ -86,12 +84,52 @@ def SRS(request):
         context.update({
             "Grade": grade,
             "total": total,
-            "total_avg": total_avg
+            "total_avg": total_avg 
         })
 
         return render(request, "1412.html", context)
 
     return render(request, "1412.html")
+
+
+
+def view_students(request):
+
+    students = Student.objects.all()
+    return render(request,"view_students.html",{ "students": students}
+    )
+
+
+def update_student(request, id):
+
+    student = Student.objects.get(id=id)
+
+    if request.method == "POST":
+
+        student.Name = request.POST.get("Name")
+        student.marks1 = int(request.POST.get("marks1"))
+        student.marks2 = int(request.POST.get("marks2"))
+        student.marks3 = int(request.POST.get("marks3"))
+        student.marks4 = int(request.POST.get("marks4"))
+
+        recalculate(student)
+
+        return redirect('/view/')
+
+    return render(request,"update_student.html",{"student": student})
+
+def delete_student(request, id):
+
+    student = Student.objects.get(id=id)
+
+    if request.method == "POST":
+
+        student.delete()
+
+        return redirect('view_students')
+
+    return render(request,"confirm_delete.html",{"student": student})
+
 
 
         

@@ -56,6 +56,9 @@
 <body>
 
 <div class="box">
+    <a href="{% url 'view_students' %}">
+    <button>View Students</button>
+    </a>
 
      <form method="POST" action="{% url 'SRS' %}">
 
@@ -85,7 +88,7 @@
 
 {% if Error %}
     <h2>{{ Error }}</h2>
-{% endif %}
+{% endif %} 
 {% if Grade %}
     <h1>Hello {{ Name }}</h1>
     <h2>{{ Grade }}</h2>
