@@ -1,11 +1,7 @@
-# Student--Marks-Management-System
-A full-stack Student Management System developed using Django,Django ORM and PostgreSQL to efficiently manage student records. The application provides a user-friendly interface for performing CRUD operations (Create, Read, Update, Delete) while maintaining data integrity through database integration.
-
 # 🎓 Student Marks Management System
 
-A Django-based web application for managing student academic records, calculating marks, generating grades automatically, and maintaining student information efficiently.
+A full-stack Student Marks Management System developed using Django, Django ORM, and PostgreSQL. The application enables users to efficiently manage student academic records, calculate grades automatically, and perform complete CRUD operations through an intuitive interface.
 
----
 
 ## 📖 Project Overview
 
@@ -122,7 +118,7 @@ Student-Marks-Management-System
 ### Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Student--Marks-Management-System.git
+git clone https://github.com/naveenbunny14122512/Student--Marks-Management-System.git
 ```
 
 ### Move to Project Folder
@@ -250,7 +246,6 @@ else:
 
 ---
 
-## 📷 Screenshots
 ## 📷 Screenshots
 
 ### 🏠 Home Page
