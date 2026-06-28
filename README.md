@@ -253,10 +253,6 @@ else:
 
 ## 📷 Screenshots
 
-### 🏠 Home Page
-
-![Home Page](Screenshots/Homepage.png)
-
 ### 📝 Student Marks Entry Page
 # Student Management System
 
@@ -266,19 +262,19 @@ A Django-based Student Management System that allows users to register, log in, 
 
 ## Login Page
 
-![Login Page](screenshots/login.png)
+![Login Page](Screenshots/login.png)
 
 ---
 
 ## Registration Page
 
-![Registration Page](screenshots/register.png)
+![Registration Page](Screenshots/register.png)
 
 ---
 
 ## Home Page
 
-![Home Page](screenshots/home.png)
+![Home Page](Screenshots/home.png)
 
 ---
 
