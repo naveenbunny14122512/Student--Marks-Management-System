@@ -282,7 +282,6 @@ A Django-based Student Management System that allows users to register, log in, 
 
 ---
 
-![Student Marks Entry](Screenshots/Postgresql%20Home%20page.png)
 
 ### 📊 Database Table
 
