@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Verification</title>
+  </head>
+  <body>
+    <div class="box">
+        <form method="POST">
+            {%csrf_token%}
+            <input type="text" name="password" placeholder="Enter Password">
+            <button type="submit" >Verify password</button>
+        </form>
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+      </div>
+    
+  </body>
+</html>

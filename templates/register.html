@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Register</title>
+     <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-image: url('{% static 'images/Flower.jpg' %}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+            color: white;
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: white;
+            border-radius: 8px;
+            background: #00c6ff;
+            color: blue;
+            cursor: pointer;
+        }
+
+        h1 {
+            color:red;
+        }
+        h2{
+            color:Blue
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Register</h1>
+    <div class="box">
+      <form method="post">
+        {% csrf_token %}
+        <!-- <input type="text" placeholder="FirstName" />
+        <input type="text" placeholder="LastName" />
+        <input type="text" placeholder="Username" />
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <input type="password" placeholder="Confirm Password" />
+        <button type="submit">Register</button> -->
+      <input type="text" name="FirstName" placeholder="First Name">
+      <input type="text" name="LastName" placeholder="Last Name">
+      <input type="text" name="username" placeholder="Username">
+      <input type="email" name="Email" placeholder="Email">
+      <input type="password" name="password" placeholder="Password">
+      <input type="password" name="confirm_password" placeholder="Confirm Password">
+      <button type="submit">Register</button>
+      </form>
+    </div>
+    {% for message in messages %}
+    <h3>{{message}}</h3>
+    {% endfor %}
+  </body>
+</html>

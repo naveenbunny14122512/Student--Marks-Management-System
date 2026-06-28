@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-image: url('{% static 'images/Sun paddy.jpg' %}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            background: rgba(115, 65, 65, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+            color: white;
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: white;
+            border-radius: 8px;
+            background: #00c6ff;
+            color: blue;
+            cursor: pointer;
+        }
+
+        h1 {
+            color:red;
+        }
+        h2{
+            color:Blue
+        }
+    </style>
+</head>
+ 
+<body>
+  <div class="box">
+    <h1>Login</h1>
+    <form method="POST">
+        {% csrf_token %}
+      <input type="text" name="username" placeholder="Username"  />
+      <input type="password" name="password" placeholder="Password" />
+      <button type="submit">Login</button>
+      <p>Don't have an account?</p>
+      <a href="{% url 'register' %}">Register Here</a>
+        {% for message in messages %}
+        <h2>{{message}}</h2>
+        {% endfor %}
+    </form>
+ 
+  </div>
+  
+    
+</body>
+</html>

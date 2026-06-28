@@ -15,6 +15,8 @@ The project demonstrates:
 * Business Logic Separation
 * Dynamic Grade Calculation
 * Data Validation
+* Added Authenticaion to Login into HomePage and Registration
+
 
 ---
 
@@ -93,7 +95,10 @@ Student-Marks-Management-System
 │   ├── view_students.html
 │   ├── update_student.html
 │   └── confirm_delete.html
-│
+|   ├── login.html
+│   ├── verify.html
+│   └── register.html
+│  
 ├── newone
 │   ├── css
 │   ├── js
@@ -253,6 +258,29 @@ else:
 ![Home Page](Screenshots/Homepage.png)
 
 ### 📝 Student Marks Entry Page
+# Student Management System
+
+A Django-based Student Management System that allows users to register, log in, and manage student academic records securely.
+
+---
+
+## Login Page
+
+![Login Page](screenshots/login.png)
+
+---
+
+## Registration Page
+
+![Registration Page](screenshots/register.png)
+
+---
+
+## Home Page
+
+![Home Page](screenshots/home.png)
+
+---
 
 ![Student Marks Entry](Screenshots/Postgresql%20Home%20page.png)
 
@@ -273,18 +301,42 @@ else:
 ![Delete Student](Screenshots/Delete%20confirmation.png)
 
 
+## Features
+
+- User Registration
+- Secure Login & Logout
+- Student Record Management
+- Add Student Marks
+- View Student Records
+- Update Student Details
+- Delete Student Records
+- Automatic Total & Average Calculation
+- Grade Calculation
+- Django Authentication
+- PostgreSQL Database
+- Responsive User Interface
+
 ---
 
-## 🚀 Future Enhancements
+## Technologies Used
 
-* Student Authentication
-* Login & Registration System
-* Search Functionality
-* Pagination
-* Export Data to Excel
-* PDF Report Generation
-* Dashboard Analytics
-* Responsive Mobile Design
+- Python
+- Django
+- PostgreSQL
+- HTML5
+- CSS3
+- Django ORM
+
+---
+
+## Future Enhancements
+
+- Search Student
+- Export Records to Excel/PDF
+- Dashboard with Charts
+- Student Profile Images
+- Email Notifications
+
 
 ---
 
